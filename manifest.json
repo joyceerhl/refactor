@@ -1,0 +1,23 @@
+{
+    "name": "Refactor",
+    "description": "Instant news summaries with Cerebras Inference",
+    "version": "1.0",
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.cnn.com/*"
+            ],
+            "js": [
+                "src/content-script.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "background": {
+        "service_worker": "src/background.js"
+    }
+}
